@@ -1,5 +1,41 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-image: url("https://i.stack.imgur.com/HCfU2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+}
+
+.all-btn {
+  background-color: rgb(14, 207, 162);
+  color: wheat;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0px 0px 2px 0px rgb(14, 207, 162);
+  ;
+  transition: 0.6s;
+  font-weight: bold;
+}
+
+.all-btn:hover {
+  transition: 0.6s;
+  background-color: rgb(24, 228, 181);
+  ;
 }

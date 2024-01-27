@@ -1,139 +1,165 @@
-.intro {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    height: 100%;
-    padding-top: 50px;
+.intro-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* border: 2px solid red; */
+  /* background-image: url('https://img.freepik.com/premium-vector/gps-satellite-flat-vector-isometric-illustration-wireless-satellite-technology-world-global-net-used-workflow-layout-game-diagram-number-options-web-design-infographics_589019-793.jpg?w=2000'); */
+  /* background-size: cover; */
+  /* background-position: 100%; */
+  height: 100%;
+  padding-top: 50px;
+}
+
+.intro-section-left {
+  height: 100%;
+  padding: 1rem;
+  max-width: 550px;
+}
+
+.intro-section-left h2 {
+  font-size: 35px;
+  font-weight: 400;
+}
+
+.intro-section-left h1 {
+  font-size: 30px;
+  margin: 7px 0;
+  font-weight: 400;
+}
+
+.intro-section-left h1 span {
+  color: rgb(14, 207, 162);
+  font-weight: bold;
+  font-size: 37px;
+}
+
+.intro-section-left p {
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  color: rgb(99, 98, 98);
+}
+
+
+
+
+
+.intro-section-left a button {
+  background-color: rgb(14, 207, 162);
+  font-size: 14px;
+  color: wheat;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: none;
+  margin: 20px 4px 0 4px;
+  padding: 12px 30px;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0px 0px 2px 0px rgb(14, 207, 162);
+  ;
+  transition: 0.6s;
+  font-weight: bold;
+}
+
+.intro-section-left a button:hover {
+  transition: 0.6s;
+  background-color: rgb(24, 228, 181);
+  ;
+}
+
+.intro-section-right {
+  max-width: 700px;
+}
+
+.intro-section-right img {
+  border-radius: 50%;
+  width: 450px;
+  height: 450px;
+}
+
+@media screen and (max-width: 1200px) {
+  .right .img-stack .img {
+    width: 350px;
+    height: 350px;
   }
-  .intro.darkCss {
-    background-color: black;
-    color: white;
-  }
+}
+
+@media screen and (max-width: 900px) {
   .intro .left {
-    height: 100%;
-    padding: 1rem;
-    max-width: 550px;
+    max-width: 450px;
   }
-  
+
   .intro .left h2 {
-    font-size: 35px;
-    font-weight: 400;
+    font-size: 28px;
   }
-  
+
   .intro .left h1 {
-    font-size: 30px;
+    font-size: 25px;
     margin: 7px 0;
-    font-weight: 400;
   }
-  
+
   .intro .left h1 span {
     color: rgb(39, 39, 239);
-    font-weight: bold;
-    font-size: 37px;
+    font-size: 32px;
   }
+
   .intro .left p {
-    line-height: 1.5;
-    letter-spacing: 0.2px;
-    color: rgb(99, 98, 98);
+    font-size: 15px;
   }
-  .intro.darkCss .left p {
-    color: rgb(185, 182, 182);
-  }
+
   .left a button {
-    margin: 20px 4px 0 4px;
-    padding: 12px 30px;
-    font-size: 14px;
-    font-weight: bold;
+    padding: 10px 23px;
+    font-size: 12px;
   }
-  .intro-btn.darkCss:hover{
-    color: white;
-  
+
+  .right .img-stack .img {
+    width: 250px;
+    height: 250px;
   }
-  
-  .intro .right {
-    max-width: 700px;
+}
+
+@media screen and (max-width: 660px) {
+  .intro .left {
+    max-width: 450px;
   }
-  .img-stack img{
-    border-radius: 50%;
+
+  .intro .left h2 {
+    font-size: 25px;
   }
-  @media screen and (max-width: 1200px) {
-    .right .img-stack .img {
-      width: 350px;
-      height: 350px;
-    }
+
+  .intro .left h1 {
+    font-size: 20px;
+    margin: 7px 0;
   }
-  
-  @media screen and (max-width: 900px) {
-    .intro .left {
-      max-width: 450px;
-    }
-  
-    .intro .left h2 {
-      font-size: 28px;
-    }
-  
-    .intro .left h1 {
-      font-size: 25px;
-      margin: 7px 0;
-    }
-  
-    .intro .left h1 span {
-      color: rgb(39, 39, 239);
-      font-size: 32px;
-    }
-    .intro .left p {
-      font-size: 15px;
-    }
-  
-    .left a button {
-      padding: 10px 23px;
-      font-size: 12px;
-    }
-    .right .img-stack .img {
-      width: 250px;
-      height: 250px;
-    }
+
+  .intro .left h1 span {
+    font-size: 27px;
   }
-  
-  @media screen and (max-width: 660px) {
-    .intro .left {
-      max-width: 450px;
-    }
-  
-    .intro .left h2 {
-      font-size: 25px;
-    }
-  
-    .intro .left h1 {
-      font-size: 20px;
-      margin: 7px 0;
-    }
-  
-    .intro .left h1 span {
-      font-size: 27px;
-    }
-    .intro .left p {
-      font-size: 13px;
-    }
-  
-    .left a button {
-      padding: 8px 17px;
-      font-size: 10px;
-    }
+
+  .intro .left p {
+    font-size: 13px;
   }
-  @media screen and (max-width: 740px) {
-    .left a button {
-      padding: 7px 15px;
-      font-size: 8px;
-    }
-    .right .img-stack .img {
-      margin-top: 15px;
-      display: none;
-    }
-    .intro .left h2 {
-      font-size: 20px;
-    }
+
+  .left a button {
+    padding: 8px 17px;
+    font-size: 10px;
   }
-  
+}
+
+@media screen and (max-width: 740px) {
+  .left a button {
+    padding: 7px 15px;
+    font-size: 8px;
+  }
+
+  .right .img-stack .img {
+    margin-top: 15px;
+    display: none;
+  }
+
+  .intro .left h2 {
+    font-size: 20px;
+  }
+}

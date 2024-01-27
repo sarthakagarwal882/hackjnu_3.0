@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "../styles/Navbar.css";
-import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 import { CiMenuFries } from "react-icons/ci";
+import { BiDonateBlood } from "react-icons/bi";
+
 import { GrClose } from "react-icons/gr";
-import { Link } from "react-router-dom";
-function Navbar({ onButtonClick, cssClass }) {
+import { Link, useLocation, useNavigate } from "react-router-dom";
+function Navbar() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const [stickyClass, setStickyClass] = useState("");
   useEffect(() => {
     window.addEventListener("scroll", stickNavbar);
@@ -23,52 +27,70 @@ function Navbar({ onButtonClick, cssClass }) {
   const ClickMenuIcons = () => {
     setClickMenu(!clickMenu);
   };
+  const navigateDonate = () => {
+    navigate("/donate");
+  };
+
+  const [pathname, setPathname] = useState("");
+  useEffect(() => {
+    if (location.pathname === "/contact") setPathname("contact");
+    if (location.pathname === "/about") setPathname("about");
+    if (location.pathname === "/") setPathname("home");
+    if (location.pathname === "/check-poverty") setPathname("checkpoverty");
+  }, [pathname]);
 
   return (
     <>
-      <section className={`main-navbar  ${stickyClass}  ${cssClass}`}>
-        <h2 className="navbarname">
-          <Link to="/">Furkan</Link>
-        </h2>
+      <div className={`main-navbar  ${stickyClass} `}>
+        <div>
+          <h2 className="main-navbar-logo">
+            <Link to="/">Furkan</Link>
+          </h2>
+        </div>
 
-        <div className="main-nav">
-          <ul
-            className={
-              clickMenu
-                ? `navbanner ${cssClass} active`
-                : `navbanner ${cssClass}`
-            }
-          >
+        <div className="navbar-section">
+          <ul className={clickMenu ? `navbanner active` : `navbanner`}>
             <li>
-              <Link className="active" to="/">
+              <Link className={pathname == "home" ? "active" : ""} to="/">
                 Home
               </Link>
             </li>
 
             <li>
-              <Link to="/check-poverty">Check Poverty</Link>
+              <Link
+                to="/check-poverty"
+                className={pathname == "checkpoverty" ? "active" : ""}
+              >
+                Check Poverty
+              </Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link className={pathname == "about" ? "active" : ""} to="/about">
+                About
+              </Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link
+                className={pathname == "contact" ? "active" : ""}
+                to="/contact"
+              >
+                Contact
+              </Link>
             </li>
             <li>
-              <button>Donate</button>
+              <button onClick={navigateDonate}>
+                Donate
+                <i><BiDonateBlood/></i>
+                </button>
             </li>
           </ul>
-          <div className={`navIcons ${cssClass}`}>
-            <i className="modeIcon" onClick={onButtonClick}>
-              {cssClass === "" ? <BsFillMoonFill /> : <BsFillSunFill />}
-            </i>
-
+          <div className="navIcons">
             <i className="MenuIcon" onClick={ClickMenuIcons}>
               {clickMenu ? <GrClose /> : <CiMenuFries />}
             </i>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 }

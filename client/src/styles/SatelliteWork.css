@@ -1,0 +1,108 @@
+.Satellite-project {
+    padding-top: 5vw;
+}
+
+
+
+.Satellite-project h2 {
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 50px;
+    letter-spacing: 0.7px;
+}
+
+.Satellite-project-p {
+    text-align: center;
+    padding: 15px 300px;
+    color: grey;
+
+}
+
+
+
+.Satellite-project-list {
+    padding: 50px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.Satellite-project-card {
+    width: 18rem;
+    margin: 15px 10px;
+    background-color: white;
+}
+.Satellite-project-card img {
+    height: 180px;
+    width: 100%;
+
+}
+
+.Satellite-project-card-body {
+    padding: 15px;
+
+}
+
+.Satellite-project-card-body h5 {
+    font-weight: 100;
+    font-size: 20px;
+
+}
+
+.Satellite-project-card-body p {
+    margin: 15px 0;
+}
+
+
+
+.Satellite-project-card-btn {
+    /* padding: 5px 10px;
+    letter-spacing: 0.5px;
+    background-color: rgb(14, 207, 162);
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.6s;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    border: 1px solid rgb(14, 207, 162); */
+}
+
+.Satellite-project-card-btn:hover {
+}
+
+
+
+
+@media screen and (max-width:1100px) {
+    .projects-list {
+        padding: 100px 50px;
+
+    }
+
+    .project-p {
+        padding: 5px 140px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .projects-list {
+        padding: 50px 50px;
+
+    }
+
+    .project-p {
+        padding: 5px 60px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .project-p {
+        padding: 5px 20px;
+    }
+}
