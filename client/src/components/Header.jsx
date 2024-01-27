@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import "../styles/Header.css";
 const Header = () => {
   return (
@@ -16,15 +15,8 @@ const Header = () => {
           many applications, including: Communication, Earth observation,
           Navigation, Astronomy
         </p>
-        <Link to="/Contact">
-          <button className="intro-section-button">hire me</button>
-        </Link>
-        <Link
-          to="https://drive.google.com/file/d/1bfFHQqPvak80fwmjSPxIFrYuDDuvvXKY/view?usp=drive_link"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button className="intro-section-buttton">get cv</button>
+        <Link to="/about">
+          <button className="intro-section-button">Explore Now</button>
         </Link>
       </div>
 

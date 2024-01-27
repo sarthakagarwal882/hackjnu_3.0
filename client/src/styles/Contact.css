@@ -1,88 +1,93 @@
-.top-contact-detail{
-    padding: 7vw 0;
-  
+.top-contact-section {
+  /* padding: 7vw 0; */
+
+}
+
+.contact-detail {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  padding: 150px 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-detail h2 {
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: 0.7px;
+}
+
+.contact-detail p {
+  margin-bottom: 60px;
+  text-align: center;
+  margin-top: 10px;
+  word-wrap: break-word;
+  padding: 0 20px;
+  color: grey;
+}
+
+.contact-detail form {
+  width: 90%;
+  max-width: 750px;
+}
+
+.contact-detail form div {
+  margin-bottom: 30px;
+}
+
+.contact-detail input,
+textarea {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid grey;
+  outline-color: black;
+  padding: 10px;
+}
+
+.contact-detail button {
+  padding: 10px 35px;
+  margin: 10px 0;
+}
+
+
+@media screen and (max-width: 750px) {
+  .top-contact-section {
+    padding: 25vw 0;
+
   }
-  .contactDetail {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    padding: 150px 0;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+  .contact-detail  h2 {
+    font-size: 30px;
+    letter-spacing: 0.4px;
   }
-  .top-contact-detail.darkCss{
-    background-color: black;
-    color: white;
+
+  .contact-detail  p {
+    font-size: 15px;
   }
-  .contactDetail h2 {
-    font-size: 35px;
-    font-weight: bold;
-    letter-spacing: 0.7px;
-  }
-  .contactDetail p {
-    margin-bottom: 60px;
-    text-align: center;
-    margin-top: 10px;
-    word-wrap: break-word;
-    padding:0  20px;
-    color: grey;
-  }
-  .contactDetail form {
-    width: 90%;
-    max-width: 750px;
-  }
-  
-  .input-group {
-    margin-bottom: 30px;
-  }
-  .contactDetail input,
-  textarea {
-    width: 100%;
-    background-color: transparent;
-    border: 1px solid grey;
-    outline-color: rgb(39, 39, 239);
-    padding: 10px;
-  }
-  .contactDetail button {
-    padding: 10px 35px;
+
+  .contact-detail  button {
+    padding: 8px 30px;
     margin: 10px 0;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    transition: 0.6s;
   }
-  .contactDetail button.darkCss:hover{
-    color: white;
+}
+
+@media screen and (max-width: 470px) {
+  .contact-detail  h2 {
+    font-size: 25px;
+    letter-spacing: 0.4px;
   }
-  
-  @media screen and (max-width: 750px) {
-    .top-contact-detail{
-      padding: 25vw 0;
-    
-    }
-    .contactDetail h2 {
-      font-size: 30px;
-      letter-spacing: 0.4px;
-    }
-    .contactDetail p {
-      font-size: 15px;
-    }
-    .contactDetail button {
-      padding: 8px 30px;
-      margin: 10px 0;
-      font-size: 12px;
-      letter-spacing: 0.4px;
-      transition: 0.6s;
-    }
+
+  .contact-detail p {
+    font-size: 12px;
   }
-  @media screen and (max-width: 470px) {
-    .contactDetail h2 {
-      font-size: 25px;
-      letter-spacing: 0.4px;
-    }
-    .contactDetail p {
-      font-size: 12px;
-    }
-    .contactDetail button {
-      margin: 5px 0;
-      font-size: 10px;
-    }
+
+  .contact-detail button {
+    margin: 5px 0;
+    font-size: 10px;
   }
-  
+}

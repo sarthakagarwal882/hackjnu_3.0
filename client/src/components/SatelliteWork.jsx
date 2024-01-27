@@ -22,12 +22,11 @@ function SatelliteWork() {
             <div className="Satellite-project-card-body">
               <h5>Poverty Mapping and Monitoring</h5>
               <p>
-                Inter is a club, it's a vibrant community where technology
-                enthusiasts come together.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam harum corrupti eum vel animi dolor.
               </p>
 
               <a
-                href="https://interccslub.netlify.app/"
+                href="/"
                 target="_blank"
                 className="Satellite-project-card-btn"
               >
@@ -45,12 +44,11 @@ function SatelliteWork() {
             <div className="Satellite-project-card-body">
               <h5>Environmental Monitoring and Disaster Response</h5>
               <p>
-                Inter is a club, it's a vibrant community where technology
-                enthusiasts come together.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam harum corrupti eum vel animi dolor.
               </p>
 
               <a
-                href="https://interccslub.netlify.app/"
+                href="/"
                 target="_blank"
                 className="Satellite-project-card-btn"
               >
@@ -68,12 +66,11 @@ function SatelliteWork() {
             <div className="Satellite-project-card-body">
               <h5>Conflict and Crisis Monitoring</h5>
               <p>
-                Inter is a club, it's a vibrant community where technology
-                enthusiasts come together.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam harum corrupti eum vel animi dolor.
               </p>
 
               <a
-                href="https://interccslub.netlify.app/"
+                href="/"
                 target="_blank"
                 className="Satellite-project-card-btn"
               >
@@ -92,12 +89,11 @@ function SatelliteWork() {
             <div className="Satellite-project-card-body">
               <h5>Public Health and Disease Monitoring</h5>
               <p>
-                Inter is a club, it's a vibrant community where technology
-                enthusiasts come together.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam harum corrupti eum vel animi dolor.
               </p>
 
               <a
-                href="https://interccslub.netlify.app/"
+                href="/"
                 target="_blank"
                 className="Satellite-project-card-btn"
               >
@@ -116,12 +112,11 @@ function SatelliteWork() {
             <div className="Satellite-project-card-body">
               <h5>Agricultural and Food Security</h5>
               <p>
-                Inter is a club, it's a vibrant community where technology
-                enthusiasts come together.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam harum corrupti eum vel animi dolor.
               </p>
 
               <a
-                href="https://interccslub.netlify.app/"
+                href="/"
                 target="_blank"
                 className="Satellite-project-card-btn"
               >

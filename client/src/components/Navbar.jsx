@@ -9,20 +9,6 @@ function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const [stickyClass, setStickyClass] = useState("");
-  useEffect(() => {
-    window.addEventListener("scroll", stickNavbar);
-    return () => window.removeEventListener("scroll", stickNavbar);
-  }, []);
-  const stickNavbar = () => {
-    if (window !== undefined) {
-      let windowHeight = window.scrollY;
-      windowHeight > 150
-        ? setStickyClass("sticky-nav-come")
-        : setStickyClass("");
-    }
-  };
-
   const [clickMenu, setClickMenu] = useState(false);
   const ClickMenuIcons = () => {
     setClickMenu(!clickMenu);
@@ -41,7 +27,7 @@ function Navbar() {
 
   return (
     <>
-      <div className={`main-navbar  ${stickyClass} `}>
+      <div className="main-navbar">
         <div>
           <h2 className="main-navbar-logo">
             <Link to="/">Furkan</Link>
@@ -80,8 +66,10 @@ function Navbar() {
             <li>
               <button onClick={navigateDonate}>
                 Donate
-                <i><BiDonateBlood/></i>
-                </button>
+                <i>
+                  <BiDonateBlood />
+                </i>
+              </button>
             </li>
           </ul>
           <div className="navIcons">
