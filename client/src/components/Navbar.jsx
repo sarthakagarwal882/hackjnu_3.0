@@ -30,7 +30,7 @@ function Navbar() {
       <div className="main-navbar">
         <div>
           <h2 className="main-navbar-logo">
-            <Link to="/">Furkan</Link>
+            <Link to="/">EcoVision</Link>
           </h2>
         </div>
 
