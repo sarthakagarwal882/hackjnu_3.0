@@ -1,0 +1,130 @@
+/* .poverty-wrapper {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.poverty-wrapper > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
+
+.poverty-wrapper {
+  width: 100%;
+  display: flex;
+  padding: 150px 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.poverty-wrapper h2 {
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: 0.7px;
+}
+/* .contactDetail p {
+    margin-bottom: 60px;
+    text-align: center;
+    margin-top: 10px;
+    word-wrap: break-word;
+    padding:0  20px;
+    color: grey;
+  } */
+.poverty-wrapper form {
+  width: 100%;
+  margin: 50px auto;
+  max-width: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.poverty-wrapper input {
+  margin-bottom: 20px;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid grey;
+  outline-color: black;
+  padding: 10px;
+}
+.poverty-wrapper form button {
+  margin: 10px 0;
+  background-color: rgb(14, 207, 162);
+  font-size: 14px;
+  color: white;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: none;
+  margin: 20px 4px 0 4px;
+  padding: 12px 30px;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0px 0px 2px 0px rgb(14, 207, 162);
+  transition: 0.6s;
+  font-weight: bold;
+}
+.map-image {
+  padding: 0 0 2rem;
+}
+
+.checkbox-mode button {
+  margin: 10px 0;
+  background-color: transparent;
+  font-size: 14px;
+  color: rgb(14, 207, 162);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: none;
+  margin: 20px 4px 0 4px;
+  padding: 12px 30px;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0px 0px 2px 0px rgb(14, 207, 162);
+  transition: 0.6s;
+  font-weight: bold;
+}
+
+.button-active {
+background-color: rgb(14, 207, 162) !important;
+color: white !important;
+}
+
+@media screen and (max-width: 750px) {
+  .top-contact-detail {
+    padding: 25vw 0;
+  }
+  .contactDetail h2 {
+    font-size: 30px;
+    letter-spacing: 0.4px;
+  }
+  .contactDetail p {
+    font-size: 15px;
+  }
+  .contactDetail button {
+    padding: 8px 30px;
+    margin: 10px 0;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    transition: 0.6s;
+  }
+}
+@media screen and (max-width: 470px) {
+  .contactDetail h2 {
+    font-size: 25px;
+    letter-spacing: 0.4px;
+  }
+  .contactDetail p {
+    font-size: 12px;
+  }
+  .contactDetail button {
+    margin: 5px 0;
+    font-size: 10px;
+  }
+}

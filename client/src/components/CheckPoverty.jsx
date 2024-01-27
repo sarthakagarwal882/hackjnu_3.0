@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
-import "leaflet/dist/leaflet.css";
-
+import "../styles/CheckPoverty.css";
 const CheckPoverty = () => {
   const [cordinates, setCordinates] = useState({
     latitude: 0.0,
@@ -13,7 +12,7 @@ const CheckPoverty = () => {
     state: "",
     country: "",
   });
-  const position = [51.505, -0.09];
+  const [mode, setMode] = useState("cordinates");
   const [mapImage, setMapImage] = useState(null);
   const handleCordinatesInputChange = (e) => {
     const { name, value } = e.target;
@@ -77,61 +76,96 @@ const CheckPoverty = () => {
     e.preventDefault();
     getMap();
   };
+  const handleCheckbox = (e) => {
+    const { name } = e.target;
+    setMode(name);
+  };
 
   return (
     <div>
-      <div>
+      <div className="poverty-wrapper">
         <h1>Check Poverty Index of an area</h1>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="latitude"
-            placeholder="Enter the latitude"
-            value={cordinates.latitude}
-            onChange={handleCordinatesInputChange}
-          />
-          <input
-            type="text"
-            name="longitude"
-            placeholder="Enter the longitude"
-            value={cordinates.longitude}
-            onChange={handleCordinatesInputChange}
-          />
-          <button type="submit">Submit</button>
-        </form>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="area"
-            placeholder="Enter the area"
-            value={location.area}
-            onChange={handleLocationInputChange}
-          />
-          <input
-            type="text"
-            name="city"
-            placeholder="city"
-            value={location.city}
-            onChange={handleLocationInputChange}
-          />
-          <input
-            type="text"
-            name="state"
-            placeholder="state"
-            value={location.state}
-            onChange={handleLocationInputChange}
-          />
-          <input
-            type="text"
-            name="country"
-            placeholder="country"
-            value={location.country}
-            onChange={handleLocationInputChange}
-          />
-          <button type="submit">Submit</button>
-        </form>
 
-        {mapImage && <img src={mapImage} alt="" />}
+        <div className="checkbox-mode">
+          <button
+            type="checkbox"
+            name="cordinates"
+            onClick={handleCheckbox}
+            className={mode === "cordinates" ? "button-active" : ""}
+          >
+            Check by cordinates
+          </button>
+
+          <button
+            type="checkbox"
+            name="location"
+            onClick={handleCheckbox}
+            className={mode === "location" ? "button-active" : ""}
+          >
+            Check by location
+          </button>
+        </div>
+
+        {mode === "cordinates" && (
+          <form onSubmit={handleSubmit}>
+            <div>
+              <input
+                required
+                type="text"
+                name="latitude"
+                placeholder="Enter the latitude"
+                value={cordinates.latitude}
+                onChange={handleCordinatesInputChange}
+              />
+            </div>
+            <div>
+              <input
+                required
+                type="text"
+                name="longitude"
+                placeholder="Enter the longitude"
+                value={cordinates.longitude}
+                onChange={handleCordinatesInputChange}
+              />
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        )}
+        {mode === "location" && (
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="area"
+              placeholder="Enter the area"
+              value={location.area}
+              onChange={handleLocationInputChange}
+            />
+            <input
+              type="text"
+              name="city"
+              placeholder="city"
+              value={location.city}
+              onChange={handleLocationInputChange}
+            />
+            <input
+              type="text"
+              name="state"
+              placeholder="state"
+              value={location.state}
+              onChange={handleLocationInputChange}
+            />
+            <input
+              type="text"
+              name="country"
+              placeholder="country"
+              value={location.country}
+              onChange={handleLocationInputChange}
+            />
+            <button type="submit">Submit</button>
+          </form>
+        )}
+
+        {mapImage && <img src={mapImage} className="map-image" alt="" />}
       </div>
       {/* <div>
         <MapContainer
