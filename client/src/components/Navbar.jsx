@@ -50,11 +50,11 @@ function Navbar() {
                 Check Poverty
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link className={pathname == "about" ? "active" : ""} to="/about">
                 About
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 className={pathname == "contact" ? "active" : ""}
